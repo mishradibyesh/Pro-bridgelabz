@@ -6,7 +6,7 @@ a=0;
 echo ${n[@]};
 for (( i=0 ;i<5;i++ ))
 do
-	if [ ${n[i]} -gt 1 ]
+	if [ ${n[i]} -ge 1 ]
 then
 		p=${n[i]};
 		for (( j=2; j<$p; j++ ))
@@ -20,13 +20,10 @@ then
  					if [ $a -eq 0 ]
 						then
         						echo "${n[i]} is a prime no";
-						else
-        						echo "${n[i]} is not a prime no";
-					fi
-	
-else 
-		echo "${n[i]} is not a prime no";
-	fi 
+					
+					fi	 
+        fi
+
 a=0;
 done
 
